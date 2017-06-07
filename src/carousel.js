@@ -747,7 +747,7 @@ const Carousel = React.createClass({
       position: 'relative',
       display: 'block',
       overflow: this.props.frameOverflow,
-      height: this.props.vertical ? this.state.frameWidth || 'initial' : 'auto',
+      height: this.props.vertical ? this.state.frameWidth || 'initial' : '100%',
       margin: this.props.framePadding,
       padding: 0,
       transform: 'translate3d(0, 0, 0)',
@@ -809,7 +809,7 @@ const Carousel = React.createClass({
       position: 'relative',
       display: 'block',
       width: this.props.width,
-      height: 'auto',
+      height: '100%',
       boxSizing: 'border-box',
       MozBoxSizing: 'border-box',
       visibility: this.state.slideWidth ? 'visible' : 'hidden'
