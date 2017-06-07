@@ -768,7 +768,7 @@ const Carousel = React.createClass({
       listStyleType: 'none',
       verticalAlign: 'top',
       width: this.props.vertical ? '100%' : this.state.slideWidth,
-      height: 'auto',
+      height: '100%',
       boxSizing: 'border-box',
       MozBoxSizing: 'border-box',
       marginLeft: this.props.vertical ? 'auto' : this.props.cellSpacing / 2,
