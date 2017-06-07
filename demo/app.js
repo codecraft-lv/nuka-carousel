@@ -1,22 +1,24 @@
 'use strict';
 
 import Carousel from '../src/carousel';
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDom from 'react-dom';
 
 window.React = React;
 
-const App = React.createClass({
-  mixins: [Carousel.ControllerMixin],
-
-  getInitialState() { return { slideIndex: 0 }; },
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { slideIndex: 0 };
+  }
 
   render() {
+    console.log('this.state', this.state)
+
     return (
       <div style={{width: '50%', margin: 'auto'}}>
         <Carousel
           ref="carousel"
-          data={this.setCarouselData.bind(this, 'carousel')}
           slideIndex={this.state.slideIndex}
           afterSlide={newSlideIndex => this.setState({ slideIndex: newSlideIndex })}>
           <img src="http://placehold.it/1000x400&text=slide1"/>
@@ -35,7 +37,7 @@ const App = React.createClass({
       </div>
     )
   }
-});
+};
 
 const content = document.getElementById('content');
 
